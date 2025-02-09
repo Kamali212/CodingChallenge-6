@@ -2,15 +2,15 @@
 function calculateProfit(costPrice, sellingPrice, unitsSold) {
    return (sellingPrice - costPrice) * unitsSold; // Create function to calculate profit
 }
-const profit = calculateProfit(75, 250, 20); // Calculate profit 
-console.log(`Total profit $${profit}`) // Expected output is Total Profit: $3500
+console.log(`Total profit $${calculateProfit(20, 30, 100)}`); // Expected output is Total Profit: $1000
+console.log(`Total profit $${calculateProfit(50, 70, 200)}`)  // Expected output is Total Profit: $4000
 
 // Task 2 Function Expression
 function calculateSalesTax(amount, taxRate) {
-    return amount * taxRate; // Create function to calculate sales tax
+    return Math.floor(amount * taxRate); // Create function to calculate sales tax and use math.floor to round down
 }
-let salesTax = calculateSalesTax(100, 0.10); // Calculate sales tax 
-console.log(`Sales Tax: $${salesTax}`) // Expected output is Sales Tax: $10
+console.log(`Sales Tax: $${calculateSalesTax(100, 0.07)}`) // Expected output is Sales Tax: $7
+console.log(`Sales Tax: $${calculateSalesTax(500, 0.01)}`) // Expected output is Sales Tax: $50
 
 // Task 3 Employee Bonus Calculation
 let calculateBonus = (salary, performanceRating) => { // Arrow function to calculate bonus based on performance and salary
@@ -35,7 +35,19 @@ let planCost = (planRate[plan] * months) - discount; // Create function to deter
 return planCost; // Return plan cost
 }
 console.log(`Total: $${calculateSubscriptionCost("Basic", 6, 10)}`); // Log basic cost with discount to console
-console.log(`Total: $${calculateSubscriptionCost("Premium", 12, 0)}`) // Log premium cost to console 
+console.log(`Total: $${calculateSubscriptionCost("Premium", 12, 0)}`); // Log premium cost to console 
+
+// Task 5 Returning Values
+
+function convertCurrency(amount, exchangeRate) {
+    return (amount * exchangeRate).toFixed(2); // create function to convert currency and round to 2 decimal places
+}
+console.log(`Converted Amount: $${convertCurrency(100, 1.1)}`); // Log converted currency; Expected output Converted amount: $110.00 
+console.log(`Converted Amount: $${convertCurrency(250, 0.85)}`); // Log converted currency; Expected output Converted amount: $212.50
+
+
+
+
 
   
 
