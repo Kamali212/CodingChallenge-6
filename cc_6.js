@@ -11,3 +11,22 @@ function calculateSalesTax(amount, taxRate) {
 }
 const salesTax = calculateSalesTax(100, 0.10); // Calculate sales tax 
 console.log(`Sales Tax: $${salesTax}`) // Expected output is Sales Tax: $10
+
+// Task 3 Employee Bonus Calculation
+const calculateBonus = (salary, performanceRating) => { // Arrow function to calculate bonus based on performance and salary
+    let bonusPercent; // Declaring function variable
+    if (performanceRating === "Excellent") { // Using if statements to determine bonus percent based on performance rating 
+        bonusPercent = 0.20;
+    } else if (performanceRating === "Good" ) {
+        bonusPercent = 0.10;
+    } else if (performanceRating === "Average") {
+        bonusPercent = 0.05;
+    }
+    let bonus = salary * bonusPercent; // Calculate bonus based on salary and bonus percentage 
+    return bonus // Return bonus 
+};
+console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`) // Log calculated bonus to console
+
+
+
+   
