@@ -45,6 +45,16 @@ function convertCurrency(amount, exchangeRate) {
 console.log(`Converted Amount: $${convertCurrency(100, 1.1)}`); // Log converted currency; Expected output Converted amount: $110.00 
 console.log(`Converted Amount: $${convertCurrency(250, 0.85)}`); // Log converted currency; Expected output Converted amount: $212.50
 
+// Task 6 Higher Order Functions 
+let orders = [200, 600, 1200, 450, 800]; // Declare array
+function applyBulkDiscount(orders, discountFunction) { 
+    return orders.map(discountFunction) // Returns array with applied discounts
+}
+let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); // Applies discounts to orders > 500
+console.log({discountedOrders}); // Expected output: 200, 540, 1080, 450, 720
+
+
+
 
 
 
